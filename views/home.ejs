@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+<div class="px-4 py-5 my-5 text-center">
+    <img class="d-block mx-auto mb-4" 
+       src="/pow-logo.png" 
+       alt="" width="150" height="150">
+
+    <h1 class="display-5 fw-bold text-body-emphasis">Welcome to Pow!</h1>
+
+    <div class="col-lg-6 mx-auto">
+    <p class="lead mb-4">
+      You can gain the first appearance information of any superhero you want!
+    </p>
+
+    <div class="mb-3">
+        <form action="/submit" method="post">
+            <label class="form-label">Write a Superhero!</label>
+            <input type="text" name="heroName" class="form-control w-50 mx-auto" required>
+            <button type="submit" class="btn btn-warning btn-lg px-4 gap-3 my-3">Search</button>
+        </form>
+    </div>
+    
+  </div>
+</div>
+
+<% if (locals.error) { %>
+    <p><%= locals.error %></p>
+<% } %>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
